@@ -13,3 +13,6 @@ As said before, the databases are serialized as a JSON object. This object is ju
 is not supported, the database won't be red. 
 
 The format of the file can be whatever you want, but you should use the **.kybdb** one, for a more clean way to detect which file is it.
+
+## Connect Maven:
+This feature will get available later... Coming very soon!
