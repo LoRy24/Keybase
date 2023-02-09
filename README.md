@@ -3,6 +3,8 @@
 
 A simple database API designed to work with custom key-based databases files serialized in JSON objects. 
 
+> ⚠️ The wiki for this project is currently under development. Stay tuned!
+
 ## More details:
 This framework is very useful when you want to work with simple databases designed on a key<->value system. In fact, this tool will help you managing a database
 serialized in a JSON string that contains a map containing keys and objects.
@@ -17,4 +19,14 @@ is not supported, the database won't be red.
 The format of the file can be whatever you want, but you should use the **.kybdb** one, for a more clean way to detect which file is it.
 
 ## Connect Maven:
-This feature will get available later... Coming very soon!
+If you want to use this framwork with Maven, you just have to add the following dependency:
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.github.lory24</groupId>
+    <artifactId>keybase</artifactId>
+    <version>1.0.0_1-RELEASE</version>
+  </dependency> 
+</dependencies>
+```
+> Remember to replace the version with the latest one.
