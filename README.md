@@ -1,4 +1,6 @@
 # Keybase
+![languages](https://img.shields.io/github/languages/count/LoRy24/Keybase?style=for-the-badge) ![vuln](https://img.shields.io/snyk/vulnerabilities/github/LoRy24/Keybase?style=for-the-badge) ![license](https://img.shields.io/github/license/LoRy24/Hashcraft?style=for-the-badge) ![discussions](https://img.shields.io/github/discussions/LoRy24/Keybase?style=for-the-badge) ![commits](https://img.shields.io/github/commit-activity/y/LoRy24/Keybase?style=for-the-badge)
+
 A simple database API designed to work with custom key-based databases files serialized in JSON objects. 
 
 ## More details:
