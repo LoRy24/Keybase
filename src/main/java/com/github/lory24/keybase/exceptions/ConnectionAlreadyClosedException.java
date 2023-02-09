@@ -1,5 +1,11 @@
 package com.github.lory24.keybase.exceptions;
 
+/**
+ * The Connection Already Closed exception is sent when the user tries to close an already closed connection. A default
+ * message is sent when fired.
+ *
+ * @author                          Lorenzo Rocca
+ */
 public class ConnectionAlreadyClosedException extends Exception {
 
     /**

@@ -1,5 +1,11 @@
 package com.github.lory24.keybase.exceptions;
 
+/**
+ * The connection closed exception is the exception thrown when an I/O actions is performed on a closed Keybase
+ * connection. It sends a default message.
+ *
+ * @author                          Lorenzo Rocca
+ */
 public class ConnectionClosedException extends Exception {
 
     /**
