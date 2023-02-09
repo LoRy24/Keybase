@@ -3,6 +3,8 @@
 
 A simple database API designed to work with custom key-based databases files serialized in JSON objects. 
 
+> ⚠️ The wiki for this project is currently under development. Stay tuned!
+
 ## More details:
 This framework is very useful when you want to work with simple databases designed on a key<->value system. In fact, this tool will help you managing a database
 serialized in a JSON string that contains a map containing keys and objects.
