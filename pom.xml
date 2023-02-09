@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.lory24</groupId>
-    <artifactId>Keybase</artifactId>
+    <artifactId>keybase</artifactId>
     <version>1.0.0_1-RELEASE</version>
 
     <properties>
