@@ -130,6 +130,20 @@ public class KeybaseConnectionImpl implements KeybaseConnection {
     }
 
     /**
+     * Gets a serialized object value from the database object of the connection. The idea of this function is to simplify
+     * the reading of serialized objects from the database without having to use the Gson lib by yourself.
+     *
+     * @param key                   The key of the value to get
+     * @param objectClass           The type of the serialized object
+     * @return                      The value
+     * @throws ConnectionClosedException If the connection is closed, but an I/O action is made
+     */
+    @Override
+    public <T> T getSerializedObject(String key, Class<T> objectClass) throws ConnectionClosedException {
+        return Keybase.gson.fromJson(this.getString(key), objectClass);
+    }
+
+    /**
      * Updates or add an Object to the database object of the connection. Cannot add multiple values with the same key.
      *
      * @param key                   The key that will contain the passed value
@@ -230,6 +244,19 @@ public class KeybaseConnectionImpl implements KeybaseConnection {
     @Override
     public void setLong(String key, short value) throws ConnectionClosedException {
         this.set(key, value);
+    }
+
+    /**
+     * Updates or add a serialized (with JSON) object to the database object of the connection. Cannot add multiple values
+     * with the same key.
+     *
+     * @param key                   The key that will contain the passed value
+     * @param value                 The value to insert
+     * @throws ConnectionClosedException If the connection is closed, but an I/O action is made
+     */
+    @Override
+    public void setSerializedObject(String key, Object value) throws ConnectionClosedException {
+        this.setString(key, Keybase.gson.toJson(value));
     }
 
     /**
