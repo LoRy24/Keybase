@@ -94,6 +94,17 @@ public interface KeybaseConnection {
     long getLong(String key) throws ConnectionClosedException;
 
     /**
+     * Gets a serialized object value from the database object of the connection. The idea of this function is to simplify
+     * the reading of serialized objects from the database without having to use the Gson lib by yourself.
+     *
+     * @param key                   The key of the value to get
+     * @param objectClass           The type of the serialized object
+     * @throws ConnectionClosedException If the connection is closed, but an I/O action is made
+     * @return                      The value
+     */
+    <T> T getSerializedObject(String key, Class<T> objectClass) throws ConnectionClosedException;
+
+    /**
      * Updates or add an Object to the database object of the connection. Cannot add multiple values with the same key.
      *
      * @param key                   The key that will contain the passed value
@@ -169,6 +180,16 @@ public interface KeybaseConnection {
      * @throws ConnectionClosedException If the connection is closed, but an I/O action is made
      */
     void setLong(String key, short value) throws ConnectionClosedException;
+
+    /**
+     * Updates or add a serialized (with JSON) object to the database object of the connection. Cannot add multiple values
+     * with the same key.
+     *
+     * @param key                   The key that will contain the passed value
+     * @param value                 The value to insert
+     * @throws ConnectionClosedException If the connection is closed, but an I/O action is made
+     */
+    void setSerializedObject(String key, Object value) throws ConnectionClosedException;
 
     /**
      * Remove a value from the database register. The value can also not be present in the database. In that case, nothing
