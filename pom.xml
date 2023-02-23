@@ -6,7 +6,7 @@
 
     <groupId>com.github.lory24</groupId>
     <artifactId>keybase</artifactId>
-    <version>1.0.0_1-RELEASE</version>
+    <version>1.0.0_2-RELEASE</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
