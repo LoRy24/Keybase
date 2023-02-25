@@ -25,7 +25,7 @@ If you want to use this framwork with Maven, you just have to add the following 
   <dependency>
     <groupId>com.github.lory24</groupId>
     <artifactId>keybase</artifactId>
-    <version>1.0.0_1-RELEASE</version>
+    <version>1.0.0_2-RELEASE</version>
   </dependency> 
 </dependencies>
 ```
